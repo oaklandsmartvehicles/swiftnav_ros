@@ -64,8 +64,8 @@ void piksi_close( const int8_t piksid );
 
 u8 piksi_spin( const int8_t piksid );
 
-u32 send_cmd( u8 *data, u32 num_bytes, void* context );
-u32 read_data( u8 *data, u32 num_bytes, void* context );
+s32 send_cmd( u8 *data, u32 num_bytes, void* context );
+s32 read_data( u8 *data, u32 num_bytes, void* context );
 
 
 #ifdef __cplusplus

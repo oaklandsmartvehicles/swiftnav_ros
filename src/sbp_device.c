@@ -134,13 +134,13 @@ static int baud2term( int baud )
 	}
 }
 
-u32 send_cmd( u8 *data, u32 num_bytes, void* context )
+s32 send_cmd( u8 *data, u32 num_bytes, void* context )
 {
 	int8_t piksid = *( int8_t* ) context;
 	return write( piksi_list[piksid]->fd, data, num_bytes );
 }
 
-u32 read_data( u8 *data, u32 num_bytes, void* context )
+s32 read_data( u8 *data, u32 num_bytes, void* context )
 {
 	int8_t piksid = *( int8_t* ) context;
 	u32 bytes_recv = 0;
